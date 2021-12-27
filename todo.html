@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo list</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./todo.css" />
+    <script defer src="./todo.js"></script>
+  </head>
+
+  <body>
+   
+      <p> <h1 class="title fas fa-tasks fa-2x text-info"  > &emsp;TO DO LIST</h1></p>
+<div style="width: 20%;float: left;">
+    <a class="nav-link text-light" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-inbox"></i> &nbsp;Inbox</a> <br><br>
+    <a class="nav-link text-light" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true"><i class="fas fa-calendar-day"></i> &nbsp;Today</a> <br><br>
+    <a class="nav-link text-light" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="true"><i class="fas fa-calendar-week"></i> &nbsp;This Week</a> <br><br>
+    <div class="all-tasks">
+      <h2 class="task-list-title">Projects</h2>
+      
+
+      <form action="" data-new-list-form >
+        <input 
+          type="text"
+          
+          class="new list"
+          data-new-list-input
+          placeholder="Add Task "
+          aria-label="new list name"
+        />
+        <button class="btn create" aria-label="create new list">Add</button><br>
+        
+      </form>
+      <ul class="task-list" data-lists></ul>
+      <button class="btn delete" data-delete-list-button-123 style="font: size 16px;"> &emsp; cancel</button>
+    </div></div>
+    
+<div style="width: 80%; float: right;margin-top: 10px;height: 550px; background-color: #f4f4f4;">
+    <div class="todo-list" data-list-display-container >
+      <div class="todo-header">
+        <h2 class="list-title" data-list-title >1st Task</h2>
+        <p class="task-count" data-list-count> tasks remaining</p>
+        <p class="date" data-list-date id="da" >date</p>
+
+      </div>
+
+      <div class="todo-body" style="float:left;">
+      
+
+        <div class="new-task-creator" >
+            <form action="" data-new-task-form>
+                <input 
+                  type="text"
+                  data-new-task-input
+                  class="new task"
+                  placeholder="new task name"
+                  aria-label="new task name"
+                />
+                <button class="btn create" aria-label="create new task">+</button>
+              </form><br><br><br>
+             
+        </div>
+        <div class="tasks" data-tasks style="margin-left: 800px;font-size: x-large;"></div>
+        
+    </div>
+
+        <div class="delete-stuff">
+          <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+          <button class="btn delete" data-delete-list-button > &emsp;Delete this list</button>
+        </div>
+      </div>
+    
+    
+
+   
+    
+    
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template></div>
+  </body>
+</html>
